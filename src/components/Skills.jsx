@@ -18,8 +18,14 @@ function Skills() {
 
 
     return (
-        <div className={`w-full  m-auto  ${bgColor2}`}>
+        <div className={`w-full  m-auto relative ${bgColor2} z-[-10] pb-20`}>
+
+            <div className="w-[180px] h-[49px] bg-[#525252] rounded-full absolute -left-[90px] bottom-[5%] z-[-5] "></div>
+
+
             <div className='w-4/5  m-auto lg:w-[900px] py-14'>
+
+
                 <h2 className={`${textColor3} text-5xl text-center font-medium mb-16`}>{skill_header}</h2>
                 <div className='flex justify-center gap-10 flex-wrap'>
                     {skillsImages.map((image, index) => {

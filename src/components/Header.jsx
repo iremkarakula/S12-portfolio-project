@@ -17,9 +17,10 @@ function Header() {
 
 
     return (
-        <div className={`w-full relative m-auto ${textColor} ${bgColor}`}>
+        <div className={`w-full relative m-auto ${textColor} ${bgColor} pb-20 z-[-5]`}>
             <div className="w-28 h-28 bg-[#D9D9D9] rounded-full absolute -top-[56px] left-[30%]"></div>
             <div className="w-[217px] h-[59px] bg-[#EA2678] rounded-full absolute -right-[109px] bottom-[30%]"></div>
+            <div className="w-28 h-28 bg-transparent border-[20px] border-[#D9D9D9] rounded-full absolute -bottom-14 left-[70%]"></div>
 
             <div className="w-4/5  m-auto lg:w-[900px] py-14">
                 <div className={`text-xs font-bold text-right flex justify-end items-center py-5 ${textColor2} `}>
@@ -37,7 +38,11 @@ function Header() {
                 <div className=' flex justify-between items-center flex-col lg:flex-row'>
                     <div className='lg:w-[550px] '>
                         <h2 className='text-3xl font-normal' >{hi}</h2>
-                        <h1 className='text-4xl my-8 font-medium'>{description}</h1>
+                        <div className='relative '>
+                            <p className="absolute w-36 h-8 bg-[#E92577]  rounded top-8 -left-5 z-[-1]"></p>
+                            <h1 className='text-4xl my-8 font-medium leading-relaxed '>{description}</h1>
+                        </div>
+
                         <div className='flex gap-2' ><FaLinkedinIn className='w-8 h-8' /><FaGithub className='w-8 h-8' /></div>
                         <div className='text-lg mb-14 mt-3 font-normal'>{currently} <span>{freelancing}</span> {forr} <span>{webDesign}</span> {projectInviteMe} <span className='underline'> {pratamaiosi} </span>
                         </div>
