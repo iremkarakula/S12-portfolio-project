@@ -61,7 +61,7 @@ const textData = {
             pratamaiosi: 'pratamaiosi@gmail.com',
             dm: 'KARANLIK MOD',
             lm: 'AYDINLIK MOD',
-            lang1: "SWITCH TO",
+            lang1: "SWITCH TO ",
             lang2: "ENGLISH"
         },
         skills: { skill_header: 'Yetenekler' },

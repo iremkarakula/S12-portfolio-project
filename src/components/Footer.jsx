@@ -4,13 +4,13 @@ import textData from '../data'
 function Footer() {
     const { workTogether, f_github, f_blog, f_linkedin, f_email } = textData.en.footer;
     return (
-        <div>
-            <div>{workTogether}</div>
-            <div>
-                <p>{f_github}</p>
-                <p>{f_blog}</p>
-                <p>{f_linkedin}</p>
-                <p>{f_email}</p>
+        <div className='w-4/5  sm:w-3/5  m-auto lg:w-[900px] py-24 text-[#0A0A14] flex flex-col  md:flex-row md:justify-center md:gap-10'>
+            <div className='text-[36px] sm:text-[42px] font-medium w-full sm:w-[430px] text-right'>{workTogether}</div>
+            <div className='text-right mt-10 md:text-left md:mt-0'>
+                <p className='text-xl font-medium text-[#1769FF] mb-1'>{f_github}</p>
+                <p className='text-xl font-medium mb-1'>{f_blog}</p>
+                <p className='text-xl font-medium text-[#0077B5] mb-1'>{f_linkedin}</p>
+                <p className='text-xl font-medium text-[#AF0C48] mb-1'>{f_email}</p>
             </div>
         </div>
     )

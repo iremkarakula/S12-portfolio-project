@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { getTextData } from "../api";
+
+import textData from "../data";
 
 
 export const ThemeContext = createContext();
@@ -22,9 +23,6 @@ export const ThemeContextProvider = ({ children }) => {
 
     };
 
-    useEffect(() => {
-        getTextData(language, setData);
-    }, [language]);
 
 
 

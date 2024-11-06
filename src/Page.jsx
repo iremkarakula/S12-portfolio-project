@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 
 function Page() {
     return (
-        <div >
+        <div className='w-full h-screen'>
             <Header />
             <Skills />
             <Profile />
