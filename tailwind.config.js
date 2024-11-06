@@ -1,11 +1,15 @@
-// tailwind.config.js
+
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}',  // React dosyalarınızın bulunduğu klasör
-    './index.html',  // HTML dosyasını eklemeyi unutmayın
-  ],
+    './src/**/*.{js,jsx,ts,tsx}',
+    './index.html',],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+      },
+    },
   },
   plugins: [],
 };

@@ -1,7 +1,7 @@
 const textData = {
     en: {
         header: {
-            hi: 'Hi',
+            hi: 'Hi! 👋',
             description: 'I’m Almila. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!',
             currently: 'Currently',
             forr: 'for',
@@ -51,7 +51,7 @@ const textData = {
 
     tr: {
         header: {
-            hi: 'Merhaba',
+            hi: 'Merhaba! 👋',
             description: 'Ben Almila. Bir full-stack geliştiricisiyim. Sağlam ve ölçeklenebilir frontend ürünleri tasarlayabilirim. Tanışalım',
             currently: 'Şu anda',
             forr: 'projeleri için',
