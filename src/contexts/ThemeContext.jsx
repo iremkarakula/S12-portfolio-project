@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
 import textData from "../data";
-import { postTextData } from "../api";
+import { getData, postTextData } from "../api";
 
 
 export const ThemeContext = createContext();
@@ -10,7 +10,29 @@ export const ThemeContextProvider = ({ children }) => {
 
     const [theme, setTheme] = useState(false);
     const [language, setLanguage] = useState('en');
+
+
     const [data, setData] = useState({});
+
+    const handlePostData = async (data) => {
+        await postTextData(data).then(response => {
+            setData(response);
+            console.log("Handle", data);
+        }).catch(err => console.log(err));
+    };
+
+    const handleGetData = async () => {
+        await getData().then(response => {
+            setData(response);
+            console.log("Get", data);
+        }).catch(err => console.log(err));
+    };
+
+    useEffect(async () => {
+        await handlePostData(textData);
+        await handleGetData();
+    }, [])
+
 
 
     const toggleTheme = () => {
@@ -37,10 +59,9 @@ export const ThemeContextProvider = ({ children }) => {
     const projectCard2 = theme ? "bg-[#495351]" : "bg-[#DDEEFE]";
     const dmButton = theme ? "bg-black" : "bg-[#E92577]";
 
-    useEffect(() => {
-        postTextData(textData);
 
-    }, [])
+
+
 
     return (
         <ThemeContext.Provider value={{ toggleTheme, theme, language, changeLanguage, setData, data, textColor, textColor2, textColor3, bgColor, bgColor2, profileCard, projectCard1, projectCard2, dmButton }}>
