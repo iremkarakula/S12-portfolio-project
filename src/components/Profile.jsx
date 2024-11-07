@@ -9,7 +9,7 @@ function Profile() {
     const { bgColor, textColor, profileCard } = useTheme();
 
     return (
-        <div className={`w-full  m-auto  ${bgColor} ${textColor} py-10 relative z-[-2]`}>
+        <div className={`w-full  m-auto  ${bgColor} ${textColor} py-10 relative z-[-2] overflow-x-clip`}>
             <div className="w-28 h-28 bg-transparent border-[20px] border-[#EA2678] rounded-full absolute -right-14 -top-7"></div>
             <div className='w-4/5  m-auto lg:w-[900px] my-14'>
 

@@ -17,7 +17,7 @@ function Header() {
 
 
     return (
-        <div className={`w-full relative m-auto ${textColor} ${bgColor} pb-20`}>
+        <div className={`w-full relative m-auto ${textColor} ${bgColor} pb-20 overflow-x-clip `}>
 
             <div className="w-28 h-28 bg-[#D9D9D9] rounded-full absolute -top-[56px] left-[30%]"></div>
             <div className="w-[217px] h-[59px] bg-[#EA2678] rounded-full top-[70%] -right-[108px] absolute "></div>
