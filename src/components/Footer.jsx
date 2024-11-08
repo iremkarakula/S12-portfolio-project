@@ -1,10 +1,11 @@
 import React from 'react'
 import textData from '../data'
-import { useTheme } from '../contexts/themeContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 function Footer() {
-    const { workTogether, f_github, f_blog, f_linkedin, f_email } = textData.en.footer;
-    const { bgColor2, textColor } = useTheme();
+    const { bgColor2, textColor, language } = useTheme();
+    const { workTogether, f_github, f_blog, f_linkedin, f_email } = textData[language].footer;
+
     return (
         <div className={`w-full  m-auto  ${bgColor2} ${textColor}  `}>
             <div className='w-4/5 sm:w-3/5  m-auto lg:w-[900px] py-24  flex flex-col  md:flex-row md:justify-center md:gap-10'>

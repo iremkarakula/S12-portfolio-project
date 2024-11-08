@@ -2,12 +2,12 @@ import React from 'react'
 import textData from '../data'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import imgwoman from "../assets/b04fd1fa29a883e2f4b8b8577a5c82eb.png";
-import { useTheme } from '../contexts/themeContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 function Header() {
 
 
-    const { theme, toggleTheme, changeLanguage, language, textColor, textColor2, bgColor, dmButton, data } = useTheme();
+    const { theme, toggleTheme, changeLanguage, language, textColor, textColor2, bgColor, dmButton } = useTheme();
 
     const { hi, description, currently, forr, projectInviteMe, freelancing, webDesign, pratamaiosi, dm, lm, lang1, lang2 } = textData[language].header;
     const currentTheme = theme ? lm : dm;
@@ -20,7 +20,7 @@ function Header() {
         <div className={`w-full relative m-auto ${textColor} ${bgColor} pb-20 overflow-x-clip `}>
 
             <div className="w-28 h-28 bg-[#D9D9D9] rounded-full absolute -top-[56px] left-[30%]"></div>
-            <div className="w-[217px] h-[59px] bg-[#EA2678] rounded-full top-[70%] -right-[108px] absolute "></div>
+            <div className="w-[217px] h-[59px] bg-[#EA2678] rounded-full sm:top-[70%] -right-[108px] absolute top-[42%]"></div>
             <div className="w-28 h-28 bg-transparent border-[20px] border-[#D9D9D9] rounded-full absolute -bottom-14 right-[20%]"></div>
 
 

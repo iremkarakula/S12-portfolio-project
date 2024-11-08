@@ -1,14 +1,15 @@
 import React from 'react'
 import textData from '../data'
 import imgcom from "../assets/f246155782db0594c00c688cdbf27f80.png"
-import { useTheme } from '../contexts/themeContext';
+import { useTheme } from '../contexts/ThemeContext';
 import imgp from "../assets/online-web-design.jpg";
 
 
 
 function Projects() {
-    const { projects, randomJokes, areYouBored, lorem3, lorem4, viewGit, goApp } = textData.en.projects;
-    const { bgColor2, textColor, profileCard, projectCard1, projectCard2 } = useTheme();
+    const { bgColor2, textColor, profileCard, projectCard1, projectCard2, language } = useTheme();
+    const { projects, randomJokes, areYouBored, lorem3, lorem4, viewGit, goApp } = textData[language].projects;
+
 
 
     return (

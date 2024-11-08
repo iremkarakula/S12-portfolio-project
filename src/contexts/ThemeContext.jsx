@@ -13,33 +13,55 @@ export const ThemeContextProvider = ({ children }) => {
     const [data, setData] = useState({});
 
 
-    useEffect(() => {
-        postTextData(textData);
-    }, [])
-
-
 
     const toggleTheme = () => {
         setTheme(pre => !pre);
-
     };
 
-    const changeLanguage = async () => {
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'true') {
+            setTheme(true);
+        } else if (savedTheme === 'true') {
+            setTheme(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme.toString());
+    }, [theme]);
+
+
+
+    const changeLanguage = () => {
         const newLanguage = language === 'en' ? 'tr' : 'en';
         setLanguage(newLanguage);
 
     };
+
+    useEffect(() => {
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            setLanguage(savedLanguage);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('language', language);
+    }, [language]);
+
+    useEffect(() => {
+        postTextData(textData);
+    }, []);
+
 
     const textColor = theme ? "text-[#FFFFFF]" : "text-[#0A0A14]";
     const textColor2 = theme ? "text-[#D9D9D9]" : "text-[#777777]";
     const textColor3 = theme ? "text-[#F4F4F4]" : "text-[#0A0A14]";
     const bgColor = theme ? "bg-[#2A262B]" : "bg-[#F4F4F4]";
     const bgColor2 = theme ? "bg-[#484148]" : "bg-white";
-
     const profileCard = theme ? "bg-[#525252]" : "bg-[#FFFFFF]";
-
     const projectCard1 = theme ? "bg-[#2D3235]" : "bg-[#DDEEFE]";
-
     const projectCard2 = theme ? "bg-[#495351]" : "bg-[#DDEEFE]";
     const dmButton = theme ? "bg-black" : "bg-[#E92577]";
 

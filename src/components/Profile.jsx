@@ -1,12 +1,14 @@
 import React from 'react'
 import textData from '../data'
-import { useTheme } from '../contexts/themeContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 
 function Profile() {
-    const { profile, basicInformation, date, city, education, role, about, lorem1, lorem2, cityAnswer, dateAnswer, educationAnswer, roleAnswer } = textData.en.profile;
 
-    const { bgColor, textColor, profileCard } = useTheme();
+
+    const { bgColor, textColor, profileCard, language } = useTheme();
+
+    const { profile, basicInformation, date, city, education, role, about, lorem1, lorem2, cityAnswer, dateAnswer, educationAnswer, roleAnswer } = textData[language].profile;
 
     return (
         <div className={`w-full  m-auto  ${bgColor} ${textColor} py-10 relative z-[-2] overflow-x-clip`}>
