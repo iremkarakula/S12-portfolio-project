@@ -22,7 +22,7 @@ export const ThemeContextProvider = ({ children }) => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'true') {
             setTheme(true);
-        } else if (savedTheme === 'true') {
+        } else if (savedTheme === 'false') {
             setTheme(false);
         }
     }, []);
