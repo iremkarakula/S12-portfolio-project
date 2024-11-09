@@ -8,8 +8,11 @@ export const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
 
-    const [theme, setTheme] = useState(false);
-    const [language, setLanguage] = useState('en');
+    const savedTheme = localStorage.getItem('theme') === "true";
+    const savedLanguage = localStorage.getItem('language') || 'en';
+
+    const [theme, setTheme] = useState(savedTheme);
+    const [language, setLanguage] = useState(savedLanguage);
     const [data, setData] = useState({});
 
 
@@ -18,14 +21,7 @@ export const ThemeContextProvider = ({ children }) => {
         setTheme(pre => !pre);
     };
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'true') {
-            setTheme(true);
-        } else if (savedTheme === 'false') {
-            setTheme(false);
-        }
-    }, []);
+
 
     useEffect(() => {
         localStorage.setItem('theme', theme.toString());
@@ -39,12 +35,6 @@ export const ThemeContextProvider = ({ children }) => {
 
     };
 
-    useEffect(() => {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-            setLanguage(savedLanguage);
-        }
-    }, []);
 
     useEffect(() => {
         localStorage.setItem('language', language);
