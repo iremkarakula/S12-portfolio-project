@@ -41,9 +41,9 @@ function Header() {
                         <span className={`${lnColorReverse}`}>{lang2}</span>
                     </button>
                 </div>
-                <div className=' flex justify-between items-center flex-col lg:flex-row'>
+                <div className=' flex justify-between items-center flex-col lg:flex-row '>
                     <div className='lg:w-[550px] '>
-                        <h2 className='text-3xl font-normal' >{hi}</h2>
+                        <h2 className='text-3xl font-normal' >{hi} 👋</h2>
                         <div className='relative '>
                             <p className="absolute w-36 h-8 bg-[#E92577]  rounded top-8 -left-5 "></p>
                             <h1 className='text-4xl my-8 font-medium leading-relaxed relative'>{description}</h1>
